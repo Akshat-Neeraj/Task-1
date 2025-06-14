@@ -1,73 +1,80 @@
 body {
-            background-color: #1e2328; 
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-        }
+    background-color: #1e2328;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
 
-        .navbar {
-            background: #202020;
-            margin-left: -20px;
-            padding: 25px;
-            position: relative;
-            left: 10px;
-        }
+.navbar {
+    background: #202020;
+    margin-left: -20px;
+    padding: 25px;
+    position: relative;
+    left: 10px;
+}
 
-        .nav-list {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            gap: 250px;
-            position: relative;
-            right: -420px;
-        }
+.nav-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 250px;
+    position: relative;
+    right: -420px;
+}
 
-        .nav-list li a {
-            color: #ffb347;
-            text-decoration: none;
-            font-size: 1.2rem;
-            font-weight: 500;
-            letter-spacing: 1px;
-            transition: color 0.2s;
-        }
+.nav-list li a {
+    color: #ffb347;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    transition: color 0.2s;
+}
 
-        .nav-list li a:hover {
-            color: #ff9800;
-        }
-        .logo{
-            position: relative;
-            left: -270px;
-            top: 10px;
-            font-size: 1.5rem;
-            color: #ffb347;
-            font-weight: bold;
-        }
-        #search-box {
-            display: none;
-            margin-left: 10px;
-            padding: 5px;
-            border-radius: 4px;
-            border: 1px solid #ccc;
-        }
+.nav-list li a:hover {
+    color: #ff9800;
+}
 
-        #search-li {
-            display: flex;
-            align-items: center;
-            position: relative;
-            left: 120px;
-        }
-        .categories-grid {
+.logo {
+    position: relative;
+    left: -270px;
+    top: 10px;
+    font-size: 1.5rem;
+    color: #ffb347;
+    font-weight: bold;
+}
+
+#search-box {
+    display: none;
+    margin-left: 10px;
+    padding: 5px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+#search-li {
+    display: flex;
+    align-items: center;
+    position: relative;
+    left: 120px;
+}
+
+.categories-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Forces exactly 3 columns */
+    grid-template-columns: repeat(3, 1fr);
     gap: 30px;
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
-    }
-
+}
 
 .category-card {
     background: #2e3133;
@@ -98,6 +105,7 @@ body {
     margin: 0 0 10px 0;
     color: white;
 }
+
 .categories-grid a {
     text-decoration: none;
 }
@@ -108,26 +116,121 @@ body {
     margin: 0;
 }
 
-@media (max-width: 900px) {
-    .categories-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-} 
+section {
+    flex: 1;
+}
+section > h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #ffb347;
+    margin: 50px;
+}
 
- @media (max-width: 600px) {
-    .categories-grid {
-        grid-template-columns: 1fr;
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #202020;
+    color: #ffb347;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: auto;
+    position: relative;
+    top: 160px;
+}
+
+
+@media (max-width: 1200px) {
+    .nav-list {
+        gap: 150px !important;
+        right: 0 !important;
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+        justify-content: space-around !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+     .nav-list li[style*="left: 150px"] {
+        left: auto !important;
+        position: static !important;
+    }
+    .signup-btn {
+        left: 0 !important;
     }
 }
 
-        footer {
-            text-align: center;
-            padding: 20px;
-            background-color: #202020;
-            color: #ffb347;
-            position: absolute;
-            left: 0;
-            width: 100%;
-            bottom: 0;
-            
-        }
+@media (max-width: 992px) {
+    .categories-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 20px !important;
+    }
+    .nav-list {
+        gap: 50px !important;
+    }
+}
+@media (max-width: 768px) {
+    .navbar {
+        padding: 15px !important;
+        margin-left: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+    .nav-list {
+        flex-direction: column !important;
+        gap: 15px !important;
+        position: static !important;
+    }
+    .nav-list li a {
+        font-size: 1rem !important;
+    }
+    .signup-btn {
+        font-size: 1rem !important;
+        padding: 8px 20px !important;
+    }
+    section > h2 {
+        font-size: 1.8rem !important;
+        margin: 30px !important;
+    }
+    .category-card {
+        padding: 25px 15px !important;
+        min-height: 180px !important;
+    }
+    .category-icon {
+        font-size: 2.8rem !important;
+    }
+    .category-card h3 {
+        font-size: 1.3rem !important;
+    }
+}
+@media (max-width: 600px) {
+    .categories-grid {
+        grid-template-columns: 1fr !important;
+    }
+}
+@media (max-width: 480px) {
+    section > h2 {
+        font-size: 1.6rem !important;
+        margin: 20px !important;
+    }
+    .category-card {
+        padding: 20px 10px !important;
+        min-height: 160px !important;
+    }
+    .category-icon {
+        font-size: 2.5rem !important;
+    }
+    .category-card h3 {
+        font-size: 1.1rem !important;
+    }
+    .signup-btn {
+        font-size: 0.9rem !important;
+        padding: 8px 15px !important;
+    }
+    .navbar {
+        padding: 10px !important;
+    }
+    .nav-list {
+        gap: 10px !important;
+    }
+}
