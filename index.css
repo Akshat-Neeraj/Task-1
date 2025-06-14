@@ -1,12 +1,12 @@
 body {
-            background-color: #1e2328; /* Body background */
+            background-color: #1e2328; 
             margin: 0;
             padding: 0;
             overflow: hidden;
         }
 
         .navbar {
-            background: #202020; /* Navbar background */
+            background: #202020;
             margin-left: -20px;
             padding: 25px;
             position: relative;
@@ -107,20 +107,18 @@ body {
     color: #aaa;
     margin: 0;
 }
-/* 
-Responsive adjustment for tablets
+
 @media (max-width: 900px) {
     .categories-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-} */
+} 
 
-/* Mobile adjustment */
-/* @media (max-width: 600px) {
+ @media (max-width: 600px) {
     .categories-grid {
         grid-template-columns: 1fr;
     }
-} */
+}
 
         footer {
             text-align: center;
